@@ -11,8 +11,8 @@
 }
 
 :root {
-    --light-color: #f3f3fe;
-    --dark-color: #363636;
+    --light-color: #ECEFF4;
+    --dark-color: #001219;
     --border-top-color: rgba(0, 0, 0, .1);
     --link-hover-color: rgba(255, 255, 255, .2);
     --title-font-family: 'Playfair Display', 'serif';
@@ -36,8 +36,8 @@ body {
 }
 
 body.dark-theme {
-    --light-color: #000000;
-    --dark-color: #ffffff;
+    --light-color: #001219;
+    --dark-color: #ECEFF4;
     --border-top-color: rgba(255, 255, 255, .1);
 }
 
@@ -72,17 +72,32 @@ textarea {
     background-color: transparent;
     border: none;
     outline: none;
-}
-
-/* 
-?RADIAL GRADIENT
-?background: radial-gradient(50% 50% at 50% 50%, rgba(255, 101, 118, .08) 0%, rgba(255, 101, 118, 0) 100%); 
-*/
+} 
+/* background: radial-gradient(50% 50% at 50% 50%, rgba(255, 101, 118, .08) 0%, 
+/* rgba(255, 101, 118, 0) 100%);
 /* !REUSABLE CLASSES */
 .container {
     max-width: var(--container-width);
     margin: 0 auto;
     padding: 0 var(--container-padding);
+}
+
+.section {
+    padding-block: var(--section-vertical-spacing);
+    position: relative;
+}
+
+.has-sparkles,
+.has-sparkles-alt {
+    position: relative;
+}
+
+.has-sparkles::before,
+.has-sparkles::after {
+    content: '';
+    position: absolute;
+    background: url('../images/sparkle.png') center no-repeat;
+    background-size: cover;
 }
 
 /* !HEADER */
@@ -161,6 +176,7 @@ textarea {
 
 .list-link {
     font-size: 1.4rem;
+    color: var(--light-color);
 }
 
 .list-link:hover,
@@ -201,6 +217,70 @@ textarea {
 }
 
 /* !HERO STYLES*/
+.title {
+    font-family: var(--title-font-family);
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+.main-title {
+    font-size: clamp(5rem, 10vw, 10rem);
+    text-align: center;
+    line-height: 1.2;
+}
+
+.sub-main-title {
+    font-size: clamp(3rem, 7vw, 7rem);
+    text-align: center;
+    line-height: 1;
+}
+
+.inline-image {
+    width: 7rem;
+    height: 7rem;
+    background: url('../images/hero.png') top center no-repeat;
+    background-size: cover;
+    border-radius: 45%;
+    border-bottom-left-radius: 0;
+    margin: 0 3rem;
+}
+
+.dark-theme .has-sparkles::before,
+.dark-theme .has-sparkles::after {
+    background: url('../images/sparkle_light.png') center no-repeat;
+    background-size: cover;
+}
+
+.inline-image.has-sparkles::before {
+    width: 1rem;
+    height: 1rem;
+    top: -.5rem;
+    right: -.5rem;
+}
+
+.inline-image.has-sparkles::after {
+    width: .8rem;
+    height: .8rem;
+    bottom: 1rem;
+    right: -1.5rem;
+}
+
+.has-sparkles-alt::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 2vw;
+    max-width: 5rem;
+    height: 2vw;
+    max-height: 5rem;
+    background: url('../images/sparkle_alt.png') center no-repeat;
+    background-size: cover;
+}
+
+.dark-theme .has-sparkles-alt::after {
+    background: url('../images/sparkle_alt_light.png') center no-repeat;
+    background-size: cover;
+}
 
 /* !ABOUT ME STYLES */
 
