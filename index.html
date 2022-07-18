@@ -19,7 +19,7 @@
     <!-- !HEADER -->
     <header class="header" id="home">
         <nav class="navbar container">
-            <a href="./index.html" class="logo">Prince.</a>
+            <a href="./index.html" class="logo">Prince<span class="has-sparkles"></span></a>
             <div class="navbar-buttons">
                 <button type="button" class="button icon-button menu-toggle-button">
                     <i class="bx bx-menu open-icon"></i>
@@ -55,12 +55,23 @@
     <!-- !HERO SECTION -->
     <section class="hero section">
         <div class="container">
-            <h1 class="title main-title">
-                Prince<span class="inline-image has-sparkles"></span>Paul
-            </h1>
-            <h1 class="title sub-main-title">
-                Full Stack Develope<span class="has-sparkles-alt">r</span>
-            </h1>
+            <div class="center-title-group">
+                <div class="left-title-group">
+                    <h1 class="title main-title">Prince Paul</h1>
+                    <h2 class="title sub-main-title">I'm a <span class="type"></span></h2>
+                </div>
+            </div>
+
+            <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+            <script>
+                var types = new Typed(".type", {
+                    strings: ["Developer...", "Learner...", "Thinker...", "Problem Solver..."],
+                    typeSpeed: 60,
+                    backSpeed: 25,
+                    backDelay: 1500,
+                    loop: true
+                })
+            </script>
         </div>
     </section>
 
@@ -70,13 +81,15 @@
             <div class="section-description d-grid">
                 <div class="scroll-reveal-left">
                     <p class="description">
-                        Hi, I'm <span class="text-bold">Prince</span>! I'm a junior developer with a focus 
-                        on <span class="text-bold">Object</span> <span class="text-bold">Oriented</span> <span class="text-bold">Programming</span>. Over the years, I've developed a 
-                        <span class="text-bold">passion</span> for programming while creating mobile and desktop 
-                        <span class="text-bold">applications</span>. I'm currently based in the 
-                        <span class="text-bold">New</span> <span class="text-bold">York</span> metropolitan area. I have an 
-                        <span class="text-bold">attention</span> <span class="text-bold">to</span> <span class="text-bold">detail</span> that helps me turn 
-                        <span class="text-bold">ideas into reality</span>.
+                        Hi, I'm <span class="text-bold">Prince</span>! I'm a junior developer with a focus
+                        on <span class="text-bold">Object</span> <span class="text-bold">Oriented</span> <span
+                            class="text-bold">Programming</span>. Over the years, I've developed a
+                        <span class="text-bold">passion</span> for programming while creating mobile and desktop
+                        <span class="text-bold">applications</span>. I'm currently based in the
+                        <span class="text-bold">New</span> <span class="text-bold">York</span> metropolitan 
+                        area. I have an <span class="text-bold">attention</span> 
+                        <span class="text-bold">to</span> <span class="text-bold">detail</span> that helps me 
+                        turn <span class="text-bold">ideas into reality</span>.
                     </p>
                 </div>
                 <div class="scroll-reveal-right">

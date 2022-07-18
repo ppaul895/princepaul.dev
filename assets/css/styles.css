@@ -238,26 +238,23 @@ textarea {
     text-transform: uppercase;
 }
 
+.center-title-group {
+    text-align: center;
+}
+
+.left-title-group {
+    display: inline-block;
+    text-align: left;
+}
+
 .main-title {
     font-size: clamp(5rem, 10vw, 10rem);
-    text-align: center;
     line-height: 1.2;
 }
 
 .sub-main-title {
-    font-size: clamp(3rem, 7vw, 7rem);
-    text-align: center;
+    font-size: clamp(2rem, 5vw, 5rem);
     line-height: 1;
-}
-
-.inline-image {
-    width: 7rem;
-    height: 7rem;
-    background: url('../images/hero.png') top center no-repeat;
-    background-size: cover;
-    border-radius: 45%;
-    border-bottom-left-radius: 0;
-    margin: 0 3rem;
 }
 
 .dark-theme .has-sparkles::before,
@@ -266,18 +263,18 @@ textarea {
     background-size: cover;
 }
 
-.inline-image.has-sparkles::before {
+.has-sparkles::before {
     width: 1rem;
     height: 1rem;
-    top: -.5rem;
-    right: -.5rem;
+    top: -2.2rem;
+    right: -3rem;
 }
 
-.inline-image.has-sparkles::after {
-    width: .8rem;
-    height: .8rem;
-    bottom: 1rem;
-    right: -1.5rem;
+.has-sparkles::after {
+    width: 1.3rem;
+    height: 1.3rem;
+    top: -1.2rem;
+    right: -2rem;
 }
 
 .has-sparkles-alt::after {
@@ -299,8 +296,8 @@ textarea {
 
 /* !ABOUT ME STYLES */
 .section-description {
-    gap: 2.5rem;
-    margin-bottom: 2.5rem;
+    gap: 3.5rem;
+    margin-bottom: 3.5rem;
 }
 
 .description {
@@ -325,18 +322,16 @@ textarea {
     object-fit: contain;
 }
 
-.description-image.has-sparkles::before,
-.description-image.has-sparkles::after {
-    width: 2rem;
-    height: 2rem;
-}
-
 .description-image.has-sparkles::before {
+    width: 1.5rem;
+    height: 1.5rem;
     top: 2rem;
     right: -2rem;
 }
 
 .description-image.has-sparkles::after {
+    width: 2rem;
+    height: 2rem;
     top: 10rem;
     right: -2rem;
 }
