@@ -296,11 +296,13 @@ textarea {
 
 /* !ABOUT ME STYLES */
 .section-description {
-    gap: 3.5rem;
+    gap: 5rem;
     margin-bottom: 3.5rem;
 }
 
 .description {
+    font-size: 2rem;
+    line-height: 3.5rem;
     text-transform: uppercase;
     font-weight: 300;
 }
@@ -309,11 +311,16 @@ textarea {
     font-weight: bold;
 }
 
+.text-semi-bold {
+    font-weight: 500;
+}
+
 .description-image {
     width: 25rem;
     height: 25rem;
     margin: 0 auto;
     transform: rotate(15deg);
+    margin-bottom: 3rem;
 }
 
 .description-image img {
@@ -337,7 +344,6 @@ textarea {
 }
 
 .tech-stack {
-
     grid-template-columns: repeat(auto-fit, minmax(5rem, 1fr));
     gap: 2.5rem;
 }
@@ -394,7 +400,103 @@ textarea {
     transform: translateY(calc(-100% + -.5rem));
 }
 
-/* !PORTFOLIO STYLES */
+/* !PROJECTS STYLES */
+.section-title-container {
+    display: inline-block;
+    margin-bottom: 5rem;
+}
+
+.section-title {
+    font-size: clamp(4rem, 10vw, 8rem);
+}
+
+.section-subtitle-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 2rem;
+    margin-left: 1rem;
+}
+
+.subtitle-number {
+    width: 5rem;
+    height: 5rem;
+    border: 2px solid var(--dark-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.subtitle-number.has-sparkles::before,
+.subtitle-number.has-sparkles::after {
+    width: 1rem;
+    height: 1rem;
+}
+
+.subtitle-number.has-sparkles::before {
+    top: 4rem;
+    right: 5rem;
+}
+
+.subtitle-number.has-sparkles::after {
+    top: -1rem;
+    right: -1rem;
+}
+
+.section-subtitle {
+    font-size: clamp(2rem, 5vw, 4rem);
+}
+
+.project-cards {
+    gap: 2.5rem;
+}
+
+.card-image {
+    height: 30rem;
+    background-color: #b3bbce;
+    border-radius: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color .4s;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 1.5rem;
+}
+
+.project-card.project-card-1:hover .card-image,
+.project-card.project-card-1:focus .card-image {
+    background-color: #BF616A;
+}
+
+.project-card.project-card-2:hover .card-image,
+.project-card.project-card-2:focus .card-image {
+    background-color: #A3BE8C;
+}
+
+.project-card.project-card-3:hover .card-image,
+.project-card.project-card-3:focus .card-image {
+    background-color: #81A1C1;
+}
+
+.card-heading {
+    color: var(--dark-color);
+}
+
+.card-title {
+    font-size: 2.5rem;
+}
+
+.card-subtitle {
+    font-size: 2rem;
+    line-height: 3.25rem;
+    opacity: .8;
+}
 
 /* !CONTACT STYLES */
 

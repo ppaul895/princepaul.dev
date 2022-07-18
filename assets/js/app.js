@@ -1,4 +1,4 @@
-//!TOGGLE NAVIGATION MENU AND ICONS
+// TOGGLE NAVIGATION MENU AND ICONS
 const menuToggleButton = document.querySelector('.menu-toggle-button');
 const menuElement = document.querySelector('.menu');
 
@@ -8,7 +8,7 @@ const toggleMenu = () => {
 }
 menuToggleButton.addEventListener('click', toggleMenu);
 
-// !REMOVE ACTIVE CLASS FROM AND ICON ON LINK CLICK
+// REMOVE ACTIVE CLASS FROM AND ICON ON LINK CLICK
 const  removeActiveLinkClass = e => {
     if (e.target.classList.contains('list-link')) {
         menuElement.classList.remove('active');
@@ -17,7 +17,7 @@ const  removeActiveLinkClass = e => {
 }
 document.addEventListener('click', removeActiveLinkClass);
 
-// !TOGGLE THEME AND STORE SELECTION WITHIN LOCAL STORAGE
+// TOGGLE THEME AND STORE SELECTION WITHIN LOCAL STORAGE
 const themeToggleButton = document.querySelector('.theme-toggle-button');
 const bodyElement = document.body;
 const currentTheme = localStorage.getItem('darkTheme');
@@ -35,4 +35,4 @@ const toggleTheme = () => {
 }
 themeToggleButton.addEventListener('click', toggleTheme)
 
-// !SCROLL REVEAL
+// SCROLL REVEAL
