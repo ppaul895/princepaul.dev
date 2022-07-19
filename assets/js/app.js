@@ -2,14 +2,17 @@
 const menuToggleButton = document.querySelector('.menu-toggle-button');
 const menuElement = document.querySelector('.menu');
 const headerElement = document.getElementById('home');
+const logoElement = document.querySelector('.logo');
 
 const toggleMenu = () => {
     menuElement.classList.toggle('active');
     menuToggleButton.classList.toggle('active');
-    if (headerElement.style.paddingBottom == "3.5rem") {
-        headerElement.style.paddingBottom = "0rem"
+    if (headerElement.style.paddingBottom == "4.5rem") {
+        headerElement.style.paddingBottom = "0rem";
+        logoElement.style.paddingTop = "0rem";
     } else {
-        headerElement.style.paddingBottom = "3.5rem"
+        headerElement.style.paddingBottom = "4.5rem";
+        logoElement.style.paddingTop = "4.5rem";
     }
 }
 menuToggleButton.addEventListener('click', toggleMenu);
@@ -19,7 +22,8 @@ const  removeActiveLinkClass = e => {
     if (e.target.classList.contains('list-link')) {
         menuElement.classList.remove('active');
         menuToggleButton.classList.remove('active');
-        headerElement.style.paddingBottom = "0rem"
+        headerElement.style.paddingBottom = "0rem";
+        logoElement.style.paddingTop = "0rem";
     }
 }
 document.addEventListener('click', removeActiveLinkClass);
@@ -40,6 +44,6 @@ const toggleTheme = () => {
         localStorage.removeItem('darkTheme');
     }
 }
-themeToggleButton.addEventListener('click', toggleTheme)
+themeToggleButton.addEventListener('click', toggleTheme);
 
 // SCROLL REVEAL
