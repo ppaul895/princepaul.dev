@@ -15,6 +15,7 @@
     --dark-color: #001219;
     --border-top-color: rgba(0, 0, 0, .1);
     --link-hover-color: rgba(255, 255, 255, .2);
+    --header-drop-shadow: 0px 2.5px 15px rgba(0, 0, 0, 0.30);
     --title-font-family: 'Playfair Display', 'serif';
     --body-font-family: 'Poppins', 'sans-serif';
     --container-width: 96rem;
@@ -24,6 +25,10 @@
 
 html {
     font-size: 62.5%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+    transition-delay: .2s;
+    transition-duration: 1s;
 }
 
 body {
@@ -33,12 +38,15 @@ body {
     background-color: var(--light-color);
     color: var(--dark-color);
     overflow-x: hidden;
+    transition-delay: .2s;
+    transition-duration: 1s;
 }
 
 body.dark-theme {
     --light-color: #001219;
     --dark-color: #ECEFF4;
     --border-top-color: rgba(255, 255, 255, .1);
+    --header-drop-shadow: 0px 2.5px 15px rgba(255, 255, 255, 0.30);
 }
 
 a {
@@ -109,6 +117,8 @@ textarea {
     position: absolute;
     background: url('../images/sparkle.png') center no-repeat;
     background-size: cover;
+    transition-delay: .2s;
+    transition-duration: 1s;
 }
 
 .d-grid {
@@ -118,6 +128,14 @@ textarea {
 /* !HEADER */
 .header {
     margin-bottom: 5rem;
+    box-shadow: var(--header-drop-shadow);
+    position: sticky;
+    top: 0;
+    padding-bottom: 0;
+    background-color: var(--light-color);
+    z-index: 999;
+    transition-delay: .2s;
+    transition-duration: 1s;
 }
 
 .navbar {
@@ -143,6 +161,8 @@ textarea {
     border-radius: .4rem;
     position: relative;
     z-index: 999;
+    transition-delay: .2s;
+    transition-duration: 1s;
 }
 
 .button {
@@ -175,13 +195,15 @@ textarea {
     pointer-events: none;
     transform: scale(0);
     transform-origin: right;
-    transition: transform .25s .25s cubic-bezier(1, 0, 0, 1);
+    transition-delay: .2s;
+    transition-duration: 1s;
 }
 
 .list {
     display: flex;
     gap: 2.5rem;
 }
+
 .menu > .list{
     opacity: 0;
 }
@@ -357,11 +379,15 @@ textarea {
 
 .tech-stack-item i{
     font-size: 5rem;
-    opacity: .5;
+    opacity: .6;
+    transition-delay: .2s;
+    transition: opacity 1s;
 }
 
 .dark-theme .tech-stack-item i {
     opacity: .8;
+    transition-delay: .2s;
+    transition: opacity 1s;
 }
 
 .tech-stack-item::before,
@@ -407,7 +433,7 @@ textarea {
 }
 
 .section-title {
-    font-size: clamp(4rem, 10vw, 8rem);
+    font-size: clamp(4rem, 7vw, 6rem);
 }
 
 .section-subtitle-container {
@@ -426,6 +452,8 @@ textarea {
     display: flex;
     align-items: center;
     justify-content: center;
+    transition-delay: .2s;
+    transition-duration: 1s;
 }
 
 .subtitle-number.has-sparkles::before,
@@ -455,6 +483,7 @@ textarea {
 .card-image {
     height: 30rem;
     background-color: #b3bbce;
+    box-shadow: 7px 7px 12px rgba(0, 0, 0, 0.5);
     border-radius: 2rem;
     display: flex;
     align-items: center;
@@ -486,6 +515,8 @@ textarea {
 
 .card-heading {
     color: var(--dark-color);
+    transition-delay: .2s;
+    transition-duration: 1s;
 }
 
 .card-title {
