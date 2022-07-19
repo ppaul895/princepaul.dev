@@ -1,7 +1,7 @@
 // TOGGLE NAVIGATION MENU AND ICONS
 const menuToggleButton = document.querySelector('.menu-toggle-button');
 const menuElement = document.querySelector('.menu');
-const headerElement = document.getElementById('home');
+const headerElement = document.getElementById('header');
 const logoElement = document.querySelector('.logo');
 
 const toggleMenu = () => {
