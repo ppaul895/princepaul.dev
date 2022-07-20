@@ -20,7 +20,6 @@
     --card-drop-shadow: 7px 7px 12px rgba(0, 0, 0, 0.5);
     --title-font-family: 'Fira Code', monospace;;
     --body-font-family: 'Poppins', 'sans-serif';
-    --container-width: 96rem;
     --container-padding: 1.5rem;
     --section-vertical-spacing: 8rem;
 }
@@ -87,7 +86,7 @@ textarea {
 
 /* !REUSABLE CLASSES */
 .container {
-    max-width: var(--container-width);
+    max-width: 38rem;
     margin: 0 auto;
     padding: 0 var(--container-padding);
 }
@@ -286,13 +285,13 @@ textarea {
     border-width: clamp(.3rem, .35vw, .4rem);
     border-color: --dark-color;
     border-radius: clamp(2rem, 2.5vw, 3rem);
-    padding: 2rem;
+    padding: 1rem;
     box-shadow: var(--header-drop-shadow);
     transition: box-shadow 1.5s;
 }
 
 .main-title {
-    font-size: clamp(5rem, 10vw, 10rem);
+    font-size: clamp(4rem, 10vw, 10rem);
     line-height: 1.2;
 }
 
@@ -526,7 +525,7 @@ textarea {
 }
 
 #card2{
-    background-image: linear-gradient(to right, #b3bbce 50%, #A3BE8C 50%);
+    background-image: linear-gradient(to right, #b3bbce 50%, #b19cd9  50%);
 }
 
 #card3{
@@ -542,7 +541,7 @@ textarea {
 
 .project-card.project-card-2:hover .card-image,
 .project-card.project-card-2:focus .card-image {
-    background-image: linear-gradient(to right, #b3bbce 50%, #A3BE8C 50%);
+    background-image: linear-gradient(to right, #b3bbce 50%, #b19cd9  50%);
     background-position: -100%;
     transition: background-image, ease .5s;
 }
@@ -648,6 +647,7 @@ textarea {
     display: flex;
     justify-content: center;
     flex: 1;
+    white-space: nowrap;
 }
 .scroll-top {
     flex: 1;
@@ -655,6 +655,7 @@ textarea {
     display: flex;
     align-items: center;
     color: var(--dark-color);
+    white-space: nowrap;
     transition-delay: .2s;
     transition-duration: 1s;
 }
@@ -665,11 +666,13 @@ textarea {
 }
 
 ::-webkit-scrollbar-track {
-    background-color: var(--dark-color);
+    background-color: var(--light-color);
+    border-radius: 3rem;
 }
 
 ::-webkit-scrollbar-thumb {
     background-color: #b3bbce;
+    border-radius: 10rem;
 }
 
 ::-webkit-scrollbar-thumb:hover {
@@ -677,3 +680,106 @@ textarea {
 }
 
 /* !MEDIA QUERIES */
+@media screen and (min-width: 480px) {
+    .container {
+        max-width: 70rem;
+    }
+
+    .left-title-group {
+        padding: 2rem;
+    }
+
+    .main-title {
+        font-size: clamp(5rem, 10vw, 10rem);
+    }
+}
+
+@media screen and (min-width: 578px) {
+    .scroll-top {
+        order: 1;
+    }
+    #socials {
+        order: 3;
+    }
+    .footer > span {
+        order: 2;
+    }
+}
+
+@media screen and (min-width: 769px) {
+    .container {
+        max-width: 90rem;
+    }
+
+    .section-description {
+        grid-template-columns: 1.5fr 1fr;
+        align-items: center;
+    }
+
+    .description {
+        font-size: 2.4rem;
+    }
+
+    .description-image {
+        width: 30rem;
+        height: 30rem;
+    }
+
+    .project-cards {
+        grid-template-columns: repeat(9, 1fr);
+        gap: 5rem;
+        align-items: center;
+    }
+
+    .project-card.project-card-1 {
+        grid-column: 1/6;
+        grid-row: 1/5;
+    }
+
+    #corporate {
+        grid-column: 6/10;
+        grid-row: 1/5;
+        justify-items: center;
+        padding-bottom: 0;
+        text-align: left;
+    }
+
+    .project-card.project-card-2 {
+        grid-column: 5/10;
+        grid-row: 5/10;
+    }
+
+    #sugar-and-spice {
+        grid-column: 1/5;
+        grid-row: 5/10;
+        padding-bottom: 0;
+        text-align: right;
+    }
+
+    .project-card.project-card-3 {
+        grid-column: 1/6;
+        grid-row: 10/15;
+    }
+
+    #dwmh {
+        grid-column: 6/10;
+        grid-row: 10/15;
+        padding-bottom: 0;
+        text-align: left;
+    }
+
+    .input-group {
+        display: flex;
+        column-gap: 5rem;
+    }
+
+    .input {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 1025px) {
+    .container {
+        max-width: 115rem;
+    }
+}
