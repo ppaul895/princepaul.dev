@@ -16,8 +16,8 @@
     --dark-color: #001219;
     --border-top-color: rgba(0, 0, 0, .1);
     --link-hover-color: rgba(255, 255, 255, .2);
-    --header-drop-shadow: 0px 2.5px 15px rgba(0, 0, 0, 0.30);
-    --card-drop-shadow: 7px 7px 12px rgba(0, 0, 0, 0.5);
+    --header-drop-shadow: 1.5px 1.5px 10px rgba(0, 0, 0, 0.30);
+    --card-drop-shadow: 7px 7px 12.5px rgba(0, 0, 0, 0.3);
     --title-font-family: 'Fira Code', monospace;;
     --body-font-family: 'Poppins', 'sans-serif';
     --container-padding: 1.5rem;
@@ -47,8 +47,8 @@ body.dark-theme {
     --light-color: #001219;
     --dark-color: #ECEFF4;
     --border-top-color: rgba(255, 255, 255, .1);
-    --header-drop-shadow: 0px 2.5px 15px rgba(0, 0, 0, 1);
-    --card-drop-shadow: 7px 7px 12px rgba(0, 0, 0, 1);
+    --header-drop-shadow: 1.5px 1.5px 10px rgba(0, 0, 0, .8);
+    --card-drop-shadow: 7px 7px 12.5px rgba(0, 0, 0, .8);
 }
 
 a {
@@ -287,7 +287,7 @@ textarea {
     border-radius: clamp(2rem, 2.5vw, 3rem);
     padding: 1rem;
     box-shadow: var(--header-drop-shadow);
-    transition: box-shadow 1.5s;
+    transition: box-shadow 1.2s;
 }
 
 .main-title {
@@ -510,6 +510,7 @@ textarea {
     align-items: center;
     justify-content: center;
     transition: background-image, ease .5s;
+    transition: box-shadow 1.2s;
     background-size: 200% 100%;
 }
 
@@ -666,8 +667,8 @@ textarea {
 }
 
 ::-webkit-scrollbar-track {
-    background-color: var(--light-color);
-    border-radius: 3rem;
+    background-color: inherit;
+    border-radius: 10rem;
 }
 
 ::-webkit-scrollbar-thumb {
