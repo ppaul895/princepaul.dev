@@ -46,6 +46,19 @@ const toggleTheme = () => {
 }
 themeToggleButton.addEventListener('click', toggleTheme);
 
+var myForm = document.getElementById("contactForm")
+myForm.addEventListener('submit', showSnackbar);
+
+// SNACKBAR
+function showSnackbar() {
+    var x = document.getElementById("snackbar")
+    setTimeout(function(){
+        x.className = "show";
+        myForm.reset();
+    }, 500);
+    setTimeout(function(){ x.className = x.className.replace("show", ""); }, 5000);
+  }
+
 // SCROLL REVEAL
 const sr = ScrollReveal({
     distance: '40px',

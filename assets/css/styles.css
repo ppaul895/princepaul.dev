@@ -596,12 +596,21 @@ textarea {
     border-bottom: 1px solid var(--dark-color);
     padding: .5rem;
     padding-top: 2.5rem;
+    transition-property: border-color;
     transition-delay: .2s;
     transition-duration: 1s;
 }
 
+.input input::selection {
+    background: #b3bbce;
+}
+
 .input input:focus + .input-label {
     transform: translateY(-1rem);
+}
+
+.input input:focus {
+    border-bottom-width: 2.5px;
 }
 
 .form-button {
@@ -620,6 +629,53 @@ textarea {
     font-size: 1.25rem;
     color: #ff7575;
     transform: translateY(-.5rem);
+}
+
+.snackbar-container {
+    max-height: 1rem;
+    padding-top: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#snackbar {
+    font-size: clamp(1.5rem, 2vw, 2.5rem);
+    text-transform: uppercase;
+    visibility: hidden;
+    display: inline-block;
+    background-color: #b3bbce;
+    color: #001219;
+    text-align: center;
+    border-radius: 3rem;
+    padding: 1rem 2.5rem;
+    z-index: 1000;
+}
+
+.show {
+    visibility: visible !important;
+    -webkit-animation: fadein .5s, fadeout 1s 3.5s;
+    animation: fadein .5s, fadeout 1s 3.5s;
+}
+
+@-webkit-keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
 }
 
 /* !FOOTER STYLES */

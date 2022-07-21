@@ -218,31 +218,34 @@
             </div>
 
             <div class="form-container">
-                <form action="https://formsubmit.co/01523c213fa10da135ea2ced9ca3244c" method="POST" class="contact-form">
-                    <input type="hidden" name="_captcha" value="false">
-                    <input type="hidden" name="_next" value="https://ppaul895.github.io/index.html#contact">
+                <iframe name="dummyframe" id="dummyframe" style="display: none"></iframe>
+                <form action="https://getform.io/f/eccfea4a-a21e-40dd-8992-2cee9da95cac" method="POST" class="contact-form" id="contactForm" target="dummyframe">
                     <div class="input-group">
                         <div class="input">
-                            <input type="text" name="name" id="name" required autocomplete="off">
+                            <input type="text" name="name" id="name" required autocomplete="off" data-lpignore="true" onfocus="this.select();">
                             <label for="name" class="input-label">Name
                                 <span class="required-field">*</span>
                             </label>
                         </div>
                         <div class="input">
-                            <input type="email" name="email" id="email" required autocomplete="off">
+                            <input type="email" name="email" id="email" required autocomplete="off" data-lpignore="true" onfocus="this.select();">
                             <label for="email" class="input-label">Email
                                 <span class="required-field">*</span>
                             </label>
                         </div>
                     </div>
                     <div class="input">
-                        <input type="text" name="message" id="message" required autocomplete="off">
+                        <input type="text" name="message" id="message" required autocomplete="off" data-lpignore="true" onfocus="this.select();">
                         <label for="message" class="input-label">Message
                             <span class="required-field">*</span>
                         </label>
                     </div>
-                    <button type="submit" class="button form-button button-fill">Send Message</button>
+                    
+                    <button type="submit" class="button form-button button-fill" id="submit-button">Send Message</button>
                 </form>
+                <div class="snackbar-container" id="snackbar-container">
+                    <div id="snackbar">Message sent. Thanks for reaching out!</div>
+                </div>
             </div>
         </div>
     </section>
