@@ -511,6 +511,11 @@ textarea {
     justify-content: center;
     transition: box-shadow 1.2s;
     background-size: 200% 100%;
+    -webkit-transition: background-position, ease .5s;
+    -moz-transition: background-position, ease .5s;
+    -ms-transition: background-position, ease .5s;
+    -o-transition: background-position, ease .5s;
+    transition: background-position, ease .5s;
 }
 
 .card-image img {
@@ -522,38 +527,29 @@ textarea {
 
 #card1{
     background-image: linear-gradient(to right, #b3bbce 50%, #BF616A 50%);
-    transition: background-position, ease .5s;
 }
 
 #card2{
     background-image: linear-gradient(to right, #b3bbce 50%, #b19cd9  50%);
-    transition: background-position, ease .5s;
 }
 
 #card3{
     background-image: linear-gradient(to right, #b3bbce 50%, #81A1C1 50%);
-    transition: background-position, ease .5s;
 }
 
 .project-card.project-card-1:hover .card-image,
 .project-card.project-card-1:focus .card-image {
-    background-image: linear-gradient(to right, #b3bbce 50%, #BF616A 50%);
     background-position: -100%;
-    transition: background-position, ease .5s;
 }
 
 .project-card.project-card-2:hover .card-image,
 .project-card.project-card-2:focus .card-image {
-    background-image: linear-gradient(to right, #b3bbce 50%, #b19cd9  50%);
     background-position: -100%;
-    transition: background-position, ease .5s;
 }
 
 .project-card.project-card-3:hover .card-image,
 .project-card.project-card-3:focus .card-image {
-    background-image: linear-gradient(to right, #b3bbce 50%, #81A1C1 50%);
     background-position: -100%;
-    transition: background-position, ease .5s;
 }
 
 .card-heading {
